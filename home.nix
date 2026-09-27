@@ -9,8 +9,10 @@
     username = "rv";
     homeDirectory = "/home/rv";
     stateVersion = "26.05";
-    # file.".config/mpv".source = ./.config/mpv;
-    file.".config/kitty/ssh.conf".text = "shell_integration no-cursor";
+    file = {
+      # ".config/mpv".source = ./.config/mpv;
+      ".config/kitty/ssh.conf".text = "shell_integration no-cursor";
+    };
     packages = with pkgs; [
       (writeShellScriptBin "xkeen-run" (builtins.readFile ./scripts/xkeen-run))
       (writeShellScriptBin "cs" (builtins.readFile ./scripts/cs))
@@ -112,6 +114,7 @@
         flyline set-cursor --backend terminal
         flyline key bind Enter 'tabCompletionEntrySelected=tabCompletionAcceptEntry+submitOrNewline'
         flyline key bind Tab 'tabCompletionEntrySelected=tabCompletionAcceptEntry'
+        flyline key remap Ctrl+d Alt+d
       '';
     };
     git = {
