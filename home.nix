@@ -32,6 +32,7 @@
       ffmpeg
       foot
       fzf
+      wireshark
       gamescope
       gcc
       gifski
@@ -96,7 +97,12 @@
     };
     imv.enable = true;
     satty.enable = true;
-    opencode.enable = true;
+    opencode = {
+      enable = true;
+      tui = {
+        theme = "system";
+      };
+    };
     starship.enable = true;
     bash = {
       enable = true;

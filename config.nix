@@ -4,6 +4,7 @@
 
 {
   pkgs,
+  lib,
   ...
 }:
 
@@ -81,6 +82,7 @@
     openssh.enable = true;
     udisks2.enable = true;
     gvfs.enable = true;
+    logind.settings.Login.HandlePowerKey = "ignore";
   };
 
   users.users."rv" = {

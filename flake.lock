@@ -60,11 +60,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1789934755,
-        "narHash": "sha256-bKFTAAN+A3Po0PnVv1XYQyLWqBQT3btYUUuFu7jcCXA=",
+        "lastModified": 1790506411,
+        "narHash": "sha256-VyC9T0znpsdgpOL3pgZduHO9hw0vGg//4fDuIS8U1Zw=",
         "owner": "HalFrgrd",
         "repo": "flyline",
-        "rev": "3b9e900f628a9da1211030016ca765fdfa2533dc",
+        "rev": "d101b0538c85301beb178a212277e9029c230717",
         "type": "github"
       },
       "original": {
@@ -162,11 +162,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1790448801,
-        "narHash": "sha256-45ai5TpPGFbSk4UAmZoMuijbPXoZwvHdkvY4mP56uqY=",
-        "rev": "f9bce96a417afbb9c64725f8727e42efafeafc21",
+        "lastModified": 1790510107,
+        "narHash": "sha256-KveNUoALIFda3G7m2VWk38jiTIky80vwY3h9gGOoF2g=",
+        "rev": "3181085bfd08663b6b9e60bc7a8395c2aaa741bd",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1080142.f9bce96a417a/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1080404.3181085bfd08/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",
