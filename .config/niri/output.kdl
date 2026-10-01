@@ -8,7 +8,7 @@ output "DP-1" {
     focus-at-startup
     variable-refresh-rate on-demand=true
     hot-corners { off; }
-    layout { always-center-single-column; }
+    // layout { always-center-single-column; }
 }
 
 

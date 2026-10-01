@@ -1,3 +1,5 @@
+include "dms/colors.kdl"
+include "dms/layout.kdl"
 include "./animation.kdl"
 include "./autostart.kdl"
 include "./keybinds.kdl"
@@ -7,5 +9,8 @@ include "./layout.kdl"
 include "./rules.kdl"
 include "./misc.kdl"
 
-include "noctalia.kdl"
+// include "noctalia.kdl"
 // include "disable-ws-switch-anim.kdl"
+// DMS Include Configs
+include "dms/cursor.kdl"
+include "dms/windowrules.kdl"

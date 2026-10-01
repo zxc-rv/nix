@@ -16,5 +16,6 @@ input {
     }
 
     // warp-mouse-to-focus
-    focus-follows-mouse max-scroll-amount="60%"
+    focus-follows-mouse max-scroll-amount="49%"
+    disable-power-key-handling
 }

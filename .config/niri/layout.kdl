@@ -6,7 +6,7 @@ layout {
     background-color "transparent" // <- needed for noctalia-shell to set wallpaper
 
     default-column-width {
-        proportion 0.75
+        proportion 0.5
     }
 
     preset-column-widths {
@@ -24,8 +24,10 @@ layout {
     border {
         on
         width 2
-        active-gradient from="#00d5ff" to="#004cff" angle=135
-        urgent-color "#9b0000"
+        active-color "#7aa2f7"
+        inactive-color "#1e1e2e"
+        // active-gradient from="#00d5ff" to="#004cff" angle=135
+        // urgent-color "#9b0000"
     }
 
     shadow { 
@@ -41,5 +43,4 @@ layout {
     //     bottom 2
     //     top 2
     // }
-
 }

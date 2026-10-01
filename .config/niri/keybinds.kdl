@@ -14,20 +14,22 @@ binds {
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Ctrl+Alt+Mod+Return  hotkey-overlay-title="Open Terminal" { spawn "foot"; }
+    Ctrl+Alt+Mod+Return  hotkey-overlay-title="Open Terminal" { spawn "kitty" "-1"; }
     // Ctrl+Alt+Mod+F       hotkey-overlay-title="Open App Launcher" { spawn "noctalia" "msg" "panel-toggle" "launcher"; }
+    // Ctrl+Alt+Mod+F       hotkey-overlay-title="Open App Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
     Ctrl+Alt+Mod+F       hotkey-overlay-title="Open App Launcher" { spawn "vicinae" "toggle"; }
     // Ctrl+Alt+Mod+F       hotkey-overlay-title="Open App Launcher" { spawn-sh "pkill fuzzel || fuzzel"; }
     // Ctrl+Alt+Mod+B       hotkey-overlay-title="Open Browser" { spawn "brave-origin-nightly" "--ozone-platform=wayland"; }
     // Ctrl+Alt+Mod+B       hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
-    Ctrl+Alt+Mod+B       hotkey-overlay-title="Open Browser" { spawn "helium-browser"; }
+    Ctrl+Alt+Mod+B       hotkey-overlay-title="Open Browser" { spawn "helium"; }
+    // Ctrl+Alt+Mod+B       hotkey-overlay-title="Open Browser" { spawn "brave-origin"; }
     // Ctrl+Alt+Mod+P       hotkey-overlay-title="MPV Launcher" { spawn "~/.config/noctalia/mpv-launcher.sh"; }
     Ctrl+Alt+Mod+P       hotkey-overlay-title="MPV Launcher" { spawn-sh "vicinae vicinae://close || vicinae vicinae://launch/@the_revolution/mpv-launcher/mpv-launcher"; }
     // Ctrl+Alt+Mod+V       hotkey-overlay-title="Clipboard" { spawn-sh "noctalia msg panel-toggle clipboard"; }
     Ctrl+Alt+Mod+V       hotkey-overlay-title="Clipboard" { spawn-sh "vicinae vicinae://close || vicinae vicinae://launch/clipboard/history"; }
-    Mod+S       hotkey-overlay-title="SSH" { spawn-sh "vicinae vicinae://close || vicinae vicinae://launch/@leiserfg/ssh/ssh"; }
+    Mod+S       hotkey-overlay-title="SSH" { spawn-sh "vicinae vicinae://close || vicinae vicinae://launch/@leiserfg/store.vicinae.ssh/ssh"; }
     Ctrl+Alt+Mod+E       hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
-    Mod+C                      { spawn-sh "vicinae vicinae://close || ~/.config/noctalia/config-lister.sh"; }
+    // Mod+C                      { spawn-sh "vicinae vicinae://close || ~/.config/noctalia/config-lister.sh"; }
 
     // ─── Media Controls ───
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+" "-l" "1.0"; }
@@ -50,12 +52,12 @@ binds {
     Alt+S                               { focus-window-or-workspace-down; }
     Alt+A                               { focus-column-or-monitor-left; }
     Alt+D                               { focus-column-or-monitor-right; }
-    Mod+H                               { focus-column-left; }
-    Mod+L                               { focus-column-right; }
+    Alt+H                               { focus-column-left; }
+    Alt+L                               { focus-column-right; }
     Alt+Up                              { focus-window-up; }
-    Mod+K                               { focus-window-up; }
+    Alt+K                               { focus-window-up; }
     Alt+Down                            { focus-window-down; }
-    Mod+J                               { focus-window-down; }
+    Alt+J                               { focus-window-down; }
 
     
     Ctrl+Alt+H                          { move-column-left; }
@@ -146,9 +148,10 @@ binds {
     // Ctrl+Shift+2                        { screenshot-screen show-pointer=false; }
     // Ctrl+Shift+3                        { screenshot-window show-pointer=false; }
     Ctrl+Shift+Escape                   { spawn "missioncenter"; }
-    Ctrl+Shift+1                               { spawn "noctalia" "msg" "screenshot-region"; }
-    Ctrl+Shift+2                          { spawn "~/.local/bin/record-gif.sh"; }
-    Mod+E                               { spawn-sh "wl-paste -t image/png | tensaku -f -"; }
+    Ctrl+Shift+1                               { spawn-sh "dms screenshot"; }
+    Ctrl+Shift+2                          { spawn "record" "video"; }
+    Ctrl+Shift+3                          { spawn "record" "gif"; }
+    Mod+E                               { spawn-sh "wl-paste -t image/png | satty -f - --early-exit all --copy-command wl-copy"; }
     Mod+Escape                          { spawn "noctalia" "msg" "panel-toggle" "session"; }
 
     // ─── Emergency Escape Key ───

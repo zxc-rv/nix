@@ -2,6 +2,8 @@
     screenshot-path null
 
     environment {
+        STEAMGRIDDB_API_KEY "96df87568676408fc7e10273cd9a724c"
+        SESSION_ID "ff48841c-20cd-4675-9ac9-f78c90f54858"
         ELECTRON_OZONE_PLATFORM_HINT "auto"
         QT_QPA_PLATFORM "wayland"
         QT_QPA_PLATFORMTHEME "gtk3"
@@ -10,6 +12,7 @@
         XDG_SESSION_TYPE "wayland"
         PROTON_ENABLE_WAYLAND "1"
         PROTON_NO_STEAMINPUT "1"
+        PROTON_HUD "1,scale=0.75,background=0,-winsys,-fps_lows,-bottom,-center"
 
     }
 
@@ -31,7 +34,6 @@
     hotkey-overlay {
        skip-at-startup
     }
-
 
     blur {
       passes 3

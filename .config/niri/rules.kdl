@@ -31,7 +31,7 @@
     }
 
     window-rule {
-        // geometry-corner-radius 12
+        geometry-corner-radius 0
         clip-to-geometry true
         draw-border-with-background false
     }
@@ -74,7 +74,6 @@
         match layer="overlay"
         background-effect { xray false; }
     }
-
     // layer-rule {
     //     match namespace="noctalia-bar"
     //     background-effect { blur false; }
@@ -106,8 +105,8 @@
     window-rule {
       match app-id="[Bb]rave|helium|^zen$"
       // match app-id="^steam$" title="^Steam$"
-      default-column-width { fixed 2073; }
-    //   default-column-width { proportion 1.0; }
+      // default-column-width { fixed 2073; }
+      default-column-width { proportion 1.0; }
     }
  
     window-rule {
@@ -123,9 +122,13 @@
     // window-rule {
     //     match app-id="vicinae"
     //     border { off; }
+    //     shadow { off; }
     // }
+
     window-rule {
       match title="Vicinae Settings"
+      match app-id=".AyuGram-wrapped"
+      match app-id="satty"
       open-floating true
     }
 

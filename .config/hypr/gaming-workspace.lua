@@ -1,4 +1,4 @@
-hl.workspace_rule({ workspace = "name:G", monitor = "DP-2", animation = "fade" })
+hl.workspace_rule({ workspace = "name:G", monitor = "DP-1", animation = "fade" })
 
 hl.bind("SUPER + G", hl.dsp.focus({ workspace = "name:G" }))
 
