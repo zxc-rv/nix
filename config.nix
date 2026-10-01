@@ -4,7 +4,6 @@
 
 {
   pkgs,
-  lib,
   ...
 }:
 
@@ -19,6 +18,8 @@
       "nix-command"
       "flakes"
     ];
+    substituters = [ "https://attic.xuyh0120.win/lantian" ];
+    trusted-public-keys = [ "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
   };
 
   boot = {
@@ -74,7 +75,7 @@
     # };
     displayManager.dms-greeter = {
       enable = true;
-      compositor.name = "niri";
+      compositor.name = "hyprland";
     };
     udev.extraRules = ''
       ACTION=="add|change", KERNEL=="event*", ATTRS{name}=="Sony Interactive Entertainment DualSense Wireless Controller Touchpad", ENV{LIBINPUT_IGNORE_DEVICE}="1"
@@ -176,10 +177,10 @@
     nano.enable = false;
     mtr.enable = true;
     niri.enable = true;
-    # hyprland = {
-    #   enable = true;
-    #   withUWSM = true;
-    # };
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+    };
     dms-shell.enable = true;
     steam.enable = true;
     flyline.enable = true;

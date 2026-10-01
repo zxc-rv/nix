@@ -4,6 +4,10 @@
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     flyline.url = "github:HalFrgrd/flyline";
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     helium-browser = {
       url = "github:oxcl/nix-flake-helium-browser";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -21,6 +25,7 @@
     {
       nixpkgs,
       cachyos-kernel,
+      fenix,
       flyline,
       helium-browser,
       home-manager,
@@ -42,7 +47,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 # backupFileExtension = "backup";
-                extraSpecialArgs = { inherit oniri; };
+                extraSpecialArgs = { inherit oniri fenix; };
                 users.rv = import ./home.nix;
               };
             }

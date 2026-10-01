@@ -2,8 +2,17 @@
   pkgs,
   lib,
   oniri,
+  fenix,
   ...
 }:
+let
+  rustToolchain =
+    with fenix.packages.${pkgs.stdenv.hostPlatform.system};
+    combine [
+      stable.defaultToolchain
+      targets.aarch64-unknown-linux-musl.stable.rust-std
+    ];
+in
 {
   home = {
     username = "rv";
@@ -60,7 +69,7 @@
       python3
       qbittorrent
       ripgrep
-      rustup
+      rustToolchain
       slurp
       statix
       tcpdump
@@ -146,6 +155,7 @@
         cursor_shape = "underline";
         cursor_trail = "1";
         cursor_trail_decay = "0.1 0.4";
+        custom_shaders = "cursor-trail-blaze";
         font_family = "JetBrainsMono Nerd Font";
         font_size = "11.5";
         input_delay = "0";
